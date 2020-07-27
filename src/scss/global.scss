@@ -1,0 +1,85 @@
+// flex box css
+
+.d-flex {
+  display: flex !important;
+}
+.justify-content-space-between {
+  justify-content: space-between !important;
+}
+.justify-content-center {
+  justify-content: center !important;
+}
+.align-items-center {
+  align-items: center !important;
+}
+.flex-d-column {
+  flex-direction: column !important;
+}
+
+//margins and paddings
+.m-auto {
+  margin: auto !important;
+}
+.m-20 {
+  margin: 20px !important;
+}
+
+.p-0 {
+  padding: 0 !important;
+}
+.p-10 {
+  padding: 10px !important;
+}
+.p-20 {
+  padding: 20px !important;
+}
+
+// colors
+.color {
+  &.light-green {
+    color: #2adbc3 !important;
+  }
+  &.white {
+    color: white;
+  }
+}
+
+//fonts
+.font-bold {
+  font-weight: bold !important;
+}
+
+// widths and heights
+.w-100 {
+  width: 100% !important;
+}
+.h-100 {
+  height: 100% !important;
+}
+
+//background
+.bg {
+  &.grey {
+    background-color: #e8eaee !important;
+  }
+  &.light-green {
+    background-color: #2adbc3;
+  }
+  &.bisque {
+    background-color: bisque;
+  }
+  &.green-blue {
+    background-color: #c4fff9;
+  }
+
+  &.yellow {
+    background-color: #f5ffc4;
+  }
+  &.black {
+    background-color: black;
+  }
+}
+//borders
+.border-solid-blue {
+  border: 1.5px solid blue !important;
+}

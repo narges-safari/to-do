@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "title": "Learn the basics",
+    "status": "todo"
+  },
+  {
+    "id": 2,
+    "title": "Writing some HTML",
+    "status": "doing"
+  },
+  {
+    "id": 3,
+    "title": "Basic SEO",
+    "status": "done"
+  },
+  {
+    "id": 4,
+    "title": "Accessibility",
+    "status": "doing"
+  },
+  {
+    "id": 5,
+    "title": "Syntax and basic structs",
+    "status": "doing"
+  },
+  {
+    "id": 6,
+    "title": "ES6 + and modular JavaScript",
+    "status": "done"
+  },
+  {
+    "id": 7,
+    "title": "Learn DOM and manipulation",
+    "status": "todo"
+  },
+  {
+    "id": 8,
+    "title": "Learn fetch API / Ajax (XHR",
+    "status": "doing"
+  },
+  {
+    "id": 9,
+    "title": "What is JSON and XML",
+    "status": "todo"
+  },
+  {
+    "id": 10,
+    "title": "Flex box",
+    "status": "todo"
+  },
+  {
+    "id": 11,
+    "title": "Learn CSS 3",
+    "status": "done"
+  },
+  {
+    "id": 12,
+    "title": "Media Queries",
+    "status": "done"
+  },
+  {
+    "id": 13,
+    "title": "JavaScript",
+    "status": "done"
+  }
+]
