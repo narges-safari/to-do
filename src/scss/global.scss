@@ -15,13 +15,16 @@
 .flex-d-column {
   flex-direction: column !important;
 }
+.align-items-baseline {
+  align-items: baseline !important;
+}
 
 //margins and paddings
 .m-auto {
   margin: auto !important;
 }
-.m-20 {
-  margin: 20px !important;
+.m-10-0 {
+  margin: 10px 0px !important;
 }
 
 .p-0 {
@@ -82,4 +85,19 @@
 //borders
 .border-solid-blue {
   border: 1.5px solid blue !important;
+}
+
+//cursor
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+//list style
+.list-style-none {
+  list-style: none !important;
+}
+
+.my-2 {
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
 }
