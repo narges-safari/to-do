@@ -5,7 +5,7 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
 import "./scss/global.scss";
-import reducer from "./store/reducers/rootReducer";
+import reducer from "./core/store/reducers/rootReducer";
 
 import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
