@@ -1,20 +1,25 @@
 import React from "react";
 import { Popover, Divider } from "@material-ui/core";
 import { MoreVert } from "@material-ui/icons";
-
+import Box from "@material-ui/core/Box";
+import DeleteOutlineIcon from "@material-ui/icons/DeleteOutline";
 export interface ToDoItemType {
-  id: number;
+  _id: string;
   title: string;
-  status: string;
+  desc: string;
+  type: number;
 }
 
 export type actionType = { id: number; label: string };
+
+export type statusType = { type: number; label: string };
 
 type todoItemProps = {
   item: ToDoItemType;
   backgroundColor: string;
   actionList: Array<actionType>;
   onAction: (actionId: number) => void;
+  onDelete: (id: string) => void;
 };
 
 const ToDoItem: React.FC<todoItemProps> = ({
@@ -22,6 +27,7 @@ const ToDoItem: React.FC<todoItemProps> = ({
   backgroundColor,
   actionList,
   onAction,
+  onDelete,
 }) => {
   const [anchorEl, setAnchorEl] = React.useState<SVGSVGElement | null>(null);
 
@@ -34,17 +40,32 @@ const ToDoItem: React.FC<todoItemProps> = ({
   };
 
   const open = Boolean(anchorEl);
-  const id = open ? `simple-popover-${item.id}` : undefined;
+  const id = open ? `simple-popover-${item._id}` : undefined;
 
   return (
     <li
-      className={`p-0 bg d-flex justify-content-space-between align-items-baseline m-10-0 ${backgroundColor}`}
+      key={item._id}
+      className={`curved p-1 bg d-flex justify-content-space-between align-items-center m-10-0 ${backgroundColor}`}
     >
-      <label>{item.title}</label>
-      <MoreVert
-        onClick={(e) => handleMoreAction(e)}
-        className="cursor-pointer"
-      />
+      <div className="m-0" style={{ width: 200, whiteSpace: "nowrap" }}>
+        <Box
+          component="div"
+          className="m-0"
+          my={2}
+          textOverflow="ellipsis"
+          overflow="hidden"
+        >
+          {item.title}
+        </Box>
+      </div>
+      <label></label>
+      <div>
+        <DeleteOutlineIcon
+          className="cursor-pointer"
+          onClick={(e) => onDelete(item._id)}
+        />
+        <MoreVert onClick={handleMoreAction} className="cursor-pointer" />
+      </div>
       <Popover
         id={id}
         open={open}
@@ -60,14 +81,14 @@ const ToDoItem: React.FC<todoItemProps> = ({
         }}
       >
         <ul className="list-style-none" style={{ padding: "0px 15px" }}>
-          {actionList.map((action, index, array) => (
+          {actionList.map((actionItem, index, array) => (
             <>
-              <li>
+              <li key={actionItem.id}>
                 <span
                   className="cursor-pointer"
-                  onClick={(e) => onAction(action.id)}
+                  onClick={(e) => onAction(actionItem.id)}
                 >
-                  {action.label}
+                  {actionItem.label}
                 </span>
               </li>
 

@@ -1,5 +1,7 @@
+html {
+  overflow-x: hidden;
+}
 // flex box css
-
 .d-flex {
   display: flex !important;
 }
@@ -20,6 +22,18 @@
 }
 
 //margins and paddings
+.m-0 {
+  margin: 0 !important;
+}
+.m-1 {
+  margin: 0.25em !important;
+}
+.m-2 {
+  margin: 0.5em !important;
+}
+.m-3 {
+  margin: 1em !important;
+}
 .m-auto {
   margin: auto !important;
 }
@@ -29,6 +43,9 @@
 
 .p-0 {
   padding: 0 !important;
+}
+.p-1 {
+  padding: 0.25em !important;
 }
 .p-10 {
   padding: 10px !important;
@@ -46,7 +63,10 @@
     color: white;
   }
 }
-
+//border-radius
+.curved {
+  border-radius: 4px;
+}
 //fonts
 .font-bold {
   font-weight: bold !important;
@@ -81,6 +101,9 @@
   &.black {
     background-color: black;
   }
+  &.lightpink {
+    background-color: rgb(253, 205, 212);
+  }
 }
 //borders
 .border-solid-blue {
@@ -91,7 +114,13 @@
 .cursor-pointer {
   cursor: pointer !important;
 }
-
+//float
+.float-right {
+  float: right;
+}
+.float-left {
+  float: left;
+}
 //list style
 .list-style-none {
   list-style: none !important;
